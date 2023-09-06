@@ -1,4 +1,4 @@
-﻿namespace Warehouse.Core.Domain
+﻿namespace Warehouse.Core.Domain.Entities
 {
     public class Product
     {
