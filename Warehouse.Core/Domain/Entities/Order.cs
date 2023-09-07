@@ -2,9 +2,9 @@
 
 namespace Warehouse.Core.Domain.Entities
 {
-    public class ProductCustomer
+    public class Order
     {
-        public int Id { get; set; }
+        public int OrderId { get; set; }
         public int ProductId { get; set; }
         public int CustomerId { get; set; }
         public decimal Quantity { get; set; }
