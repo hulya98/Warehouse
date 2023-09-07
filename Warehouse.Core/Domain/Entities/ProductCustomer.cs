@@ -1,4 +1,6 @@
-﻿namespace Warehouse.Core.Domain.Entities
+﻿using Warehouse.Core.Enums;
+
+namespace Warehouse.Core.Domain.Entities
 {
     public class ProductCustomer
     {
