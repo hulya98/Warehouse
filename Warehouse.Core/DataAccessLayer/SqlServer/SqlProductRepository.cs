@@ -1,4 +1,5 @@
-﻿using Warehouse.Core.Domain.Entities;
+﻿using System.Data.SqlClient;
+using Warehouse.Core.Domain.Entities;
 using Warehouse.Core.Domain.Repositories;
 
 namespace Warehouse.Core.DataAccessLayer.SqlServer
