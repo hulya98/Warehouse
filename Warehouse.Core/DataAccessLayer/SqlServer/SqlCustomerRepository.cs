@@ -43,7 +43,7 @@ namespace Warehouse.Core.DataAccessLayer.SqlServer
         {
             using SqlConnection connection = new SqlConnection(_connectionString);
             connection.Open();
-            const string query = "update Customers set CustomerName = @name where CustomerId = @CustomerId";
+            const string query = "update Customers set CustomerName = @CustomerName where CustomerId = @CustomerId";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("CustomerId", customer.CustomerId);
             cmd.ExecuteNonQuery();
@@ -64,7 +64,7 @@ namespace Warehouse.Core.DataAccessLayer.SqlServer
             return null;
         }
 
-        public List<Customer> Get()
+        public List<Customer> GetAll()
         {
             using SqlConnection connection = new SqlConnection(_connectionString);
             connection.Open();
@@ -76,8 +76,9 @@ namespace Warehouse.Core.DataAccessLayer.SqlServer
             {
                 Customer customer = Mapper.Map(reader);
                 result.Add(customer);
-                return result;
+                
             }
+            return result;
         }
 
        

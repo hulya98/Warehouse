@@ -13,7 +13,7 @@ namespace Warehouse.Core.Domain.Repositories
         void Delete(int CustomerId);
         void Update(Customer customer);
         Customer Get(int id);
-        List<Customer> Get();
-        List<Customer> Get();
+        List<Customer> GetAll();
+        
     }
 }
