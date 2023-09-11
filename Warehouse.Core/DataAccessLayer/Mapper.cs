@@ -7,9 +7,9 @@ namespace Warehouse.Core.DataAccessLayer
 {
     public static class Mapper
     {
-        public static Domain.Entities.Customer Map(IDataReader reader)
+        public static Customer MapCustomer(IDataReader reader)
         {
-            return new Domain.Entities.Customer
+            return new Customer
             {
                 CustomerName = (string)reader["CustomerName"],
                 CustomerId = (int)reader["CustomerId"],

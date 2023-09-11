@@ -59,7 +59,7 @@ namespace Warehouse.Core.DataAccessLayer.SqlServer
             SqlDataReader reader = cmd.ExecuteReader();
             if(reader.Read()) 
             {
-                return Mapper.Map(reader);
+                return Mapper.MapCustomer(reader);
             }
             return null;
         }
@@ -74,7 +74,7 @@ namespace Warehouse.Core.DataAccessLayer.SqlServer
             List<Customer> result = new List<Customer>();
             while (reader.Read())
             {
-                Customer customer = Mapper.Map(reader);
+                Customer customer = Mapper.MapCustomer(reader);
                 result.Add(customer);
                 
             }
