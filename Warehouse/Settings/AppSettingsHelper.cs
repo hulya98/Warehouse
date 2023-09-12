@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using Newtonsoft.Json;
+using System.IO;
 
 namespace Warehouse.Settings
 {
@@ -18,7 +19,17 @@ namespace Warehouse.Settings
 
             string settingsRaw = File.ReadAllText(fileName);
 
-            AppSettings appSettings = JsonConvert
+            AppSettings appSettings = JsonConvert.DeserializeObject<AppSettings>(settingsRaw);
+            return appSettings;
+        }
+
+        public void SaveSettings(AppSettings settings)
+        {
+            string settingsRaw = JsonConvert.SerializeObject(settings);
+            string fileName = Path.Combine(_configurationPath, "Warehouse.Settings");
+
+            File.WriteAllText(fileName, settingsRaw);
+
         }
     }
 }
