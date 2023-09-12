@@ -11,7 +11,7 @@ namespace Warehouse.Settings
             _configurationPath = configurationPath;
         }
 
-        public AppSettings ReadFromFile()
+        public static AppSettings GetSettings()
         {
             string fileName = Path.Combine(_configurationPath, "Warehouse.Settings");
             if (!File.Exists(fileName))
