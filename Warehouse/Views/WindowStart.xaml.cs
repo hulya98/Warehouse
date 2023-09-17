@@ -16,5 +16,10 @@ namespace Warehouse.Views
         {
             CheckServer();
         }
+
+        private void CheckServer()
+        {
+
+        }
     }
 }
