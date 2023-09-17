@@ -12,14 +12,24 @@ namespace Warehouse.Views
             InitializeComponent();
         }
 
+
         private void WindowLoaded(object sender, RoutedEventArgs e)
         {
             CheckServer();
         }
 
-        private void CheckServer()
+        public void CheckServer()
         {
-
+            if (ApplicationContext.DB.IsOnline())
+            {
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.Show();
+                this.Close();
+                return;
+            }
+            ConfigurationWindow configurationWIndow = new ConfigurationWindow();
+            configurationWIndow.Show();
+            this.Close();
         }
     }
 }

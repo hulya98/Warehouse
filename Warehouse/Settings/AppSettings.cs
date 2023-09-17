@@ -5,7 +5,7 @@ namespace Warehouse.Settings
     public class AppSettings
     {
         public string DbHost { get; set; }
-        public string DbPort { get; set; }
+        public int DbPort { get; set; }
         public DatabaseType DbType { get; set; }
         public string DbName { get; set; }
         public bool WindowsAuthetication { get; set; }
