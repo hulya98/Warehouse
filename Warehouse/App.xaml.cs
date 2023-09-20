@@ -13,5 +13,9 @@ namespace Warehouse
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            ApplicationContext.Initialize();
+        }
     }
 }
