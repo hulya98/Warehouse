@@ -22,8 +22,9 @@ namespace Warehouse.Views
         {
             if (ApplicationContext.DB.IsOnline())
             {
-                LoginWindow loginWindow = new LoginWindow();
-                loginWindow.Show();
+                LoginWindow window = new LoginWindow();
+                window.DataContext = new ViewModels.LoginWindowViewModel(window);
+                window.Show();
                 this.Close();
                 return;
             }

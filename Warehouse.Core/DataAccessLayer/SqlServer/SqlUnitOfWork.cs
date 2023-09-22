@@ -15,6 +15,7 @@ namespace Warehouse.Core.DataAccessLayer.SqlServer
 
         public IProductRepository ProductRepository => new SqlProductRepository(_connectionString);
 
+        public IUserRepository UserRepository => new SqlUserRepository(_connectionString);  
         public bool IsOnline()
         {
             try
